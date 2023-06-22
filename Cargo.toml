@@ -1,0 +1,21 @@
+[package]
+name = "k8s-llm-2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+llama = "0.14.2"
+llm-chain = { git = "https://github.com/sobelio/llm-chain", branch = "main" }
+tokio = { version = "1.28.2", features = ["full"] }
+anyhow = "1.0.71"
+async-trait = "0.1.68"
+llm-chain-llama-sys =  { git = "https://github.com/sobelio/llm-chain", branch = "main" }
+llm-chain-llama = { git = "https://github.com/sobelio/llm-chain", branch = "main" }
+serde = { version = "1.0.163", features = ["derive"] }
+thiserror = "1.0.40"
+lazy_static = "1.4.0"
+
+[dev-dependencies]
+tokio = { version = "1.28.2", features = ["macros", "rt"] }
